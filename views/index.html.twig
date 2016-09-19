@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>To Do List</title>
+</head>
+<body>
+    <h1>Welcome to Your Inventory List</h1>
+
+    {% if items is not empty %}
+        <h4>Your Collection</h4>
+        {% for item in items %}
+            <p>{{ item.item }}</p>
+        {% endfor %}
+    {% endif %}
+
+
+    <div class="">
+        <form class="" action="/" method="post">
+            <label for="item">Add An Item:</label>
+            <input type="text" name="item" value="">
+            <button type="submit" name="button">Add</button>
+        </form>
+        <form class="" action="/delete" method="post">
+            <button type="submit" name="button">Delete Everything</button>
+        </form>
+        <form class="" action="/search" method="post">
+            <input type="text" name="input" value="">
+            <button type="submit" name="button">Search</button>
+        </form>
+
+    </div>
+</body>
+</html>
